@@ -1,32 +1,38 @@
 class Solution {
 public:
-    int countPrefixSuffixPairs(vector<string>& words) {
-        int ret = 0;
-        int sz = words.size();
-        for (int i = 0; i < sz - 1; i++) {
-            for (int j = i + 1; j < sz; j++) {
-                check(words, i, j, ret);
+    vector<string> wordSubsets(vector<string>& words1, vector<string>& words2) {
+        int maxFreq[26] = {0};
+
+        for (const string& word : words2) {  
+            int freq[26] = {0};
+            for (char c : word) {
+                freq[c - 'a']++;
+            }
+            for (int i = 0; i < 26; i++) {
+                maxFreq[i] = max(maxFreq[i], freq[i]);
             }
         }
 
-        return ret;
-    }
+        vector<string> result;
+        for (const string& word : words1) {
+            int freq[26] = {0};
+            for (char c : word) {
+                freq[c - 'a']++;
+            }
 
-    void check(vector<string>& words, int i, int j, int& ret) {
-        int m = words[i].size();
-        int n = words[j].size();
-        if (m > n) return;
+            bool isSubset = true;
+            for (int i = 0; i < 26; i++) {
+                if (freq[i] < maxFreq[i]) {
+                    isSubset = false;
+                    break;
+                }
+            }
 
-        for (int k = 0; k < m; k++) {
-            if (words[i][k] != words[j][k]) return;
+            if (isSubset) {
+                result.push_back(word);
+            }
         }
 
-        while (m > 0) {
-            if (words[i][m - 1] != words[j][n - 1]) return;
-            m--;
-            n--;
-        }
-
-        ret++;
+        return result;
     }
 };

@@ -6,7 +6,7 @@ https://leetcode.com/problems/trapping-rain-water-ii/description/
 Given an `m x n` integer matrix `heightMap` representing the height of each unit cell in a 2D elevation map, return the volume of water it can trap after raining.
 
 ## Example 1:
-
+![alt text](image-1.png)
 ```
 Input: heightMap = [[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]
 Output: 4
@@ -17,7 +17,7 @@ The total volume of water trapped is 4.
 ```
 
 ## Example 2:
-
+![alt text](image.png)
 ```
 Input: heightMap = [[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]
 Output: 10

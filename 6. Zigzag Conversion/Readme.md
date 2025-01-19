@@ -46,7 +46,7 @@ P     I
 Input:
 s = "A", numRows = 1
 
-**Output:**
+Output:
 "A"
 ```
 

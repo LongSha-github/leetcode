@@ -32,6 +32,7 @@ Both the first row and the second column are fully painted at this step.
 
 ## Example 2:
 ![alt text](image-1.png)
+
 **Input:**
 ```
 arr = [2,8,7,4,1,3,5,6,9]

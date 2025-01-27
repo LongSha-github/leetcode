@@ -1,4 +1,4 @@
-# 3223. 3429. Paint House IV
+# 3429. Paint House IV
 https://leetcode.com/problems/paint-house-iv/description/
 
 ## Problem Description
